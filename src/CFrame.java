@@ -100,6 +100,8 @@ public class CFrame extends JFrame {
             addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    if (NewShapeControl.getSelectedShape() != null)
+                        NewShapeControl.cancelSelectedShape();
                     String saveFileName = buildFileDialog("Save", FileDialog.SAVE);
                     try {
                         FileOutputStream saveFileStream = new FileOutputStream(saveFileName);

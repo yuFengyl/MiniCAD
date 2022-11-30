@@ -24,8 +24,10 @@ public class DPanel extends JPanel {
                         NewShapeControl.widenSelected();
                     else if (e.getKeyChar() == 't' || e.getKeyChar() == 'T')
                         NewShapeControl.thinSelected();
-                    else if (e.getKeyChar() == 'D' || e.getKeyChar() == 'd')
+                    else if (e.getKeyChar() == 'D' || e.getKeyChar() == 'd'){
                         NewShapeControl.deleteSelected();
+                        NewShapeControl.setCurrentState(null);
+                    }
                     repaint();
                 }
             }

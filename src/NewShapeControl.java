@@ -8,7 +8,7 @@ public class NewShapeControl {
         select, drawLine, drawRectangle, drawCircle, drawText, isSelected
     }
 
-    private static State currentState;
+    private static State currentState = null;
     public static void setCurrentState(State state) {
         currentState = state;
     }
@@ -72,7 +72,6 @@ public class NewShapeControl {
     private static MyShape selectedShape = null;
 
     public static void setSelectedShape(MyShape shape){
-        // TODO: 可能需要在其它的情况下也要把笔画的粗细复原
         // as we have removed the shape in the list, we need to add back
         if (selectedShape != null) {
             selectedShape.decreaseWidthInSelection();
